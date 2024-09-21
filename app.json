@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "HairQue",
+    "slug": "HairQue",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff",
+      "plugins": [
+        "@react-native-firebase/app",
+        "@react-native-firebase/auth"
+      ]
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to save images."
+      }
+      
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+
+      "permissions": [
+        "CAMERA_ROLL",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.shaikhkhalid003.HairQue"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyC62DlGkZfCg0d36KWtKBkD_v_ddb-bVc4",
+          "authDomain": "hairque-c6278.firebaseapp.com",
+          "databaseURL": "https://hairque-c6278-default-rtdb.asia-southeast1.firebasedatabase.app",
+          "projectId": "hairque-c6278",
+          "storageBucket": "hairque-c6278.appspot.com",
+          "messagingSenderId": "873079016608",
+          "appId": "1:873079016608:web:c6805aa2dd984f5d9e8dc5",
+          "measurementId": "G-10QVGEYGCK"
+        }
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b3efc66a-295b-4285-953c-4e6fac21fb20"
+      }
+    }
+  }
+}
