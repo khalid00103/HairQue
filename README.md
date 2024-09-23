@@ -14,7 +14,7 @@ HairQue is a convenient appointment booking app designed for salons, beauty parl
 ## Demo
 
 ### Home Page (Store Listings)
-![Store Listings](./assets/demo-images/home-page.png){:style="width: 400px;"}
+<img src="./assets/demo-images/home-page.png" alt="Store Listings" width="300"/>
 
 ### Store Portfolio
 ![Store Portfolio](./assets/demo-images/store-portfolio.png){:style="width: 400px;"}
