@@ -17,19 +17,19 @@ HairQue is a convenient appointment booking app designed for salons, beauty parl
 <img src="./assets/demo-images/home-page.png" alt="Store Listings" width="300"/>
 
 ### Store Portfolio
-![Store Portfolio](./assets/demo-images/store-portfolio.png){:style="width: 400px;"}
+<img src="./assets/demo-images/store-portfolio.png" alt="Store Portfolio" width="400" />
 
 ### Booking Tab
-![Booking Tab](./assets/demo-images/booking-tab.png){:style="width: 400px;"}
+<img src="./assets/demo-images/booking-tab.png" alt="Booking Tab" width="400" />
 
 ### Booking Confirmation
-![Booking Confirmation](./assets/demo-images/booking-confirmation.png){:style="width: 400px;"}
+<img src="./assets/demo-images/booking-confirmation.png" alt="Booking Confirmation" width="400" />
 
 ### User Profile
-![User Profile](./assets/demo-images/user-profile.png){:style="width: 400px;"}
+<img src="./assets/demo-images/user-profile.png" alt="User Profile" width="400" />
 
 ### Booking History
-![Bookin History](./assets/demo-images/booking-history.png){:style="width: 400px;"}
+<img src="./assets/demo-images/booking-history.png" alt="Booking History" width="400" />
 
 ## Tech Stack
 - **Frontend**: React Native
