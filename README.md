@@ -14,22 +14,22 @@ HairQue is a convenient appointment booking app designed for salons, beauty parl
 ## Demo
 
 ### Home Page (Store Listings)
-![Store Listings](./assets/demo-images/home-page.png)
+![Store Listings](./assets/demo-images/home-page.png){:style="width: 400px;"}
 
 ### Store Portfolio
-![Store Portfolio](./assets/demo-images/store-portfolio.png)
+![Store Portfolio](./assets/demo-images/store-portfolio.png){:style="width: 400px;"}
 
 ### Booking Tab
-![Booking Tab](./assets/demo-images/booking-tab.png)
+![Booking Tab](./assets/demo-images/booking-tab.png){:style="width: 400px;"}
 
 ### Booking Confirmation
-![Booking Confirmation](./assets/demo-images/booking-confirmation.png)
+![Booking Confirmation](./assets/demo-images/booking-confirmation.png){:style="width: 400px;"}
 
 ### User Profile
-![User Profile](./assets/demo-images/user-profile.png)
+![User Profile](./assets/demo-images/user-profile.png){:style="width: 400px;"}
 
 ### Booking History
-![Bookin History](./assets/demo-images/booking-history.png)
+![Bookin History](./assets/demo-images/booking-history.png){:style="width: 400px;"}
 
 ## Tech Stack
 - **Frontend**: React Native
@@ -56,15 +56,14 @@ HairQue is a convenient appointment booking app designed for salons, beauty parl
 ```
 ├── src
 │   ├── components
-│   │   ├── StoreList.js
-│   │   ├── StorePortfolio.js
-│   │   ├── BookingTab.js
-│   │   └── UserProfile.js
-│   ├── services
-│   │   ├── api.js
-│   └── assets
-│       ├── images
-│       └── videos
+|   |   |__ Authentication
+|   |   |__ Home
+│   │   ├── Important_files
+│   │   ├── ShopDetails
+│   ├── assets/
+│   │   ├── fonts/
+│   │   ├── colors/
+│   │   │   └── colors.js
 ├── README.md
 └── package.json
 ```
