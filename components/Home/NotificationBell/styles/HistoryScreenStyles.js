@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../../assets/colors/colors';
+import colors from '../../../../assets/colors/colors';
 import { responsiveHeight, responsiveWidth, responsiveFontSize } from "react-native-responsive-dimensions";
 
 const styles = StyleSheet.create({

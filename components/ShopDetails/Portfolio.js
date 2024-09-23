@@ -4,13 +4,10 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import colors from '../../assets/colors/colors.js';
 import { useFonts } from "expo-font";
 import { SafeAreaView } from "react-native-safe-area-context";
-import{
-    responsiveHeight,
-    responsiveWidth,
-    responsiveFontSize
-}from "react-native-responsive-dimensions";
+import{responsiveHeight,responsiveWidth,responsiveFontSize}from "react-native-responsive-dimensions";
 //import categoriesData from '../../assets/data/categoriesData.js';
-const Portfolio=({shop})=>{
+
+const Portfolio= React.memo(({ shop })=>{
     //const item = categoriesData.find(item => item.id === shop.storeId);
     //console.log(shop);
     const [fontsLoaded]= useFonts({
@@ -34,46 +31,47 @@ const Portfolio=({shop})=>{
         }
         return acc;
     }, []);   
+
     return (
         <SafeAreaView>
-                    {/*portfolio screen*/}
-                    <View style={styles.PortfolioContainer}>
-                        <Text style ={styles.portfolioText}>Portfolio</Text>
+            {/*portfolio screen*/}
+            <View style={styles.PortfolioContainer}>
+                <Text style ={styles.portfolioText}>Portfolio</Text>
 
-                        {/*portfolio image list with 3 row and 2 column*/}
-                        <View style={styles.portfolioImageList}>
+                {/*portfolio image list with 3 row and 2 column*/}
+                <View style={styles.portfolioImageList}>
                             
-                            {profileImageRows.map((rowKeys, rowIndex) => (
-                                <View key={rowIndex} style={styles.portfolioImageRow}>
-                                    {rowKeys.map((key) => (
-                                        <View key={key} style={{backgroundColor: colors.textwhite,
-                                            width: '35%',
-                                            height: responsiveHeight(13),
-                                            justifyContent: 'center',
-                                            alignItems: 'center',
-                                            overflow: 'hidden',
-                                            borderRadius: responsiveWidth(2.48),}}>
-                                            <Image
-                                                 source={{ uri: shop[key] }}
-                                                 style={{
-                                                    width: responsiveWidth(20),
-                                                    height: responsiveWidth(20), // You can adjust the height as needed
-                                                    resizeMode: 'contain',
-                                                    backgroundColor: colors.textwhite,
-                                                }}
-                                                 onError={(error) => console.error(`Error loading image: ${error}`)}
-                                            />
-                                        </View>
-                                    ))}
+                    {profileImageRows.map((rowKeys, rowIndex) => (
+                        <View key={rowIndex} style={styles.portfolioImageRow}>
+                            {rowKeys.map((key) => (
+                                <View key={key} style={{backgroundColor: colors.textwhite,
+                                    width: '35%',
+                                    height: responsiveHeight(13),
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    overflow: 'hidden',
+                                    borderRadius: responsiveWidth(2.48),}}>
+                                    <Image
+                                        source={{ uri: shop[key] }}
+                                        style={{
+                                            width: responsiveWidth(20),
+                                            height: responsiveWidth(20), // You can adjust the height as needed
+                                            resizeMode: 'contain',
+                                            backgroundColor: colors.textwhite,
+                                        }}
+                                        onError={(error) => console.error(`Error loading image: ${error}`)}
+                                    />
                                 </View>
                             ))}
-
-                        {/*portfolio image list ends*/}    
                         </View>
-                    </View>
+                    ))}
+
+                    {/*portfolio image list ends*/}    
+                </View>
+            </View>
         </SafeAreaView>
     );
-};
+});
 const styles = StyleSheet.create({
     PortfolioContainer:{
         justifyContent:'space-between',

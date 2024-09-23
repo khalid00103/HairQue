@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import styles from './HistoryScreenStyles';
+import styles from './styles/HistoryScreenStyles';
 import NotFoundAnimation from './NotFoundAnimation';
 const HistoryScreen = ({ remainingItems, phone }) => {
     if (remainingItems.length === 0) {

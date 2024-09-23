@@ -9,7 +9,7 @@ import{
     responsiveWidth,
     responsiveFontSize
 }from "react-native-responsive-dimensions";
-const Review =({})=>{
+const Review = React.memo(()=>{
     const [fontsLoaded]= useFonts({
         'Oswald-Medium' : require('../../assets/fonts/Oswald-Medium.ttf'),
         'Roboto-Regular': require('../../assets/fonts/Roboto-Regular.ttf'),
@@ -22,13 +22,14 @@ const Review =({})=>{
 
     return(
         <SafeAreaView>
-                    <View style={styles.ReviewContainer}>
-                        <Text style={styles.reviewText}>Reviews</Text>
-                    <View style={styles.ReviewListContainer}>
-                        <Text style={[{color:'gray'}]}>no reviews</Text>
-                    </View> 
-                    </View> 
-{/*                         <View style={styles.cameraContainer}>
+            <View style={styles.ReviewContainer}>
+                <Text style={styles.reviewText}>Reviews</Text>
+                <View style={styles.ReviewListContainer}>
+                    <Text style={[{color:'gray'}]}>no reviews</Text>
+                </View> 
+
+            </View> 
+                {/* <View style={styles.cameraContainer}>
                         <Camera style={styles.camera} type={type}
                             faceDetectorSettings={{
                                 mode: FaceDetector.FaceDetectorMode.fast,
@@ -55,10 +56,11 @@ const Review =({})=>{
                                 <Ionicons name = "radio-button-on" size = {responsiveWidth(26)} color={colors.textwhite}/>
                             </View>
                         </Camera>
-                        </View>*/}
+                    </View>
+                */}
         </SafeAreaView>
     );
-};
+});
 const styles = StyleSheet.create({
     ReviewContainer:{
         //top:responsiveHeight(2.45),

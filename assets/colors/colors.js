@@ -9,5 +9,13 @@ const colors = {
     TextBlood:'#BD4444',
     Transback:'#090909',
     calenderbackground:'#E7E7E7',
+    lightModeBackground: '#fff',
+    lightModeSelectedBackground: '#f0f0f0',
+    lightModeText: '#000',
+    lightModeSelectedText: '#333',
+    darkModeBackground: '#000',
+    darkModeSelectedBackground: '#333',
+    darkModeText: '#fff',
+    darkModeSelectedText: '#f0f0f0',
 }
 export default colors;

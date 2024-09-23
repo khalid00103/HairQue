@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
-import LoginPage from './LoginPage'; // Replacing EmailConfirm with Login
-import RegisterPage from './RegisterPage'; // Replacing EmailInput with Register
+// components/Authentication/EmailAuthScreen.js
+import React from 'react';
+import { View, Text, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
 import { useFonts } from 'expo-font';
 import colors from '../../assets/colors/colors';
+import AuthStackScreen from './AuthStack'; // Import AuthStack
 
-const EmailAuthScreen = ({ navigation }) => {
-  const [isRegistered, setIsRegistered] = useState(true); // Start with login first
-
+const EmailAuthScreen = () => {
   const [fontsLoaded] = useFonts({
     'Oswald-Medium': require('../../assets/fonts/Oswald-Medium.ttf'),
     'Roboto-Regular': require('../../assets/fonts/Roboto-Regular.ttf'),
@@ -18,35 +16,45 @@ const EmailAuthScreen = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.emailAuthContainer}>
+      <StatusBar barStyle="light-content" backgroundColor={colors.statusBarColor} />
+      {/* Title Section */}
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>HairQue</Text>
       </View>
-      {isRegistered ? (
-        <LoginPage setIsRegistered={setIsRegistered} navigation={navigation} />
-      ) : (
-        <RegisterPage setIsRegistered={setIsRegistered} />
-      )}
+
+      {/* Auth Stack Section */}
+      <View style={styles.authContainer}>
+        <AuthStackScreen />
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  emailAuthContainer: {
+    flex: 1, // Ensure it takes up the full screen height
+    justifyContent: 'flex-end',
+    //alignItems: 'center',
     backgroundColor: colors.textblack,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   titleContainer: {
     width: '100%',
-    marginBottom: 250,
+    alignItems: 'center', // Center the title horizontally
+    //paddingVertical: 20, // Add some spacing around the title
   },
   titleText: {
     fontSize: 34,
     fontFamily: 'Oswald-Medium',
     color: colors.textwhite,
     textAlign: 'center',
+  },
+  authContainer: {
+    //flex: 0.5, // Ensure the AuthStackScreen takes up the rest of the screen
+    height: '70%',
+    //justifyContent: 'center',
+    //alignItems: 'center', // Center the form horizontally
+    //backgroundColor: colors.TextBlood,
   },
 });
 

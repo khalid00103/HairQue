@@ -31,7 +31,7 @@ const NotFoundAnimation = () => {
     <View style={styles.container}>
       <LottieView
         progress={progress}
-        source={require('../../../assets/notFoundAnimation.json')}
+        source={require('../../../assets/files/notFoundAnimation.json')}
         autoPlay
         loop={false}
       />

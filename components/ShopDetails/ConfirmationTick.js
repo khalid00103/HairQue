@@ -31,7 +31,7 @@ export default ConfirmationTick =({navigation}) => {
         <View style={styles.container}>
             <LottieView
                 progress={progress}
-                source = {require('../../assets/confirmationAnimation.json')}
+                source = {require('../../assets/files/confirmationAnimation.json')}
                 //autoPlay
             />
         </View>

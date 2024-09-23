@@ -4,33 +4,29 @@
     "slug": "HairQue",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ICONS/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ICONS/Hairque-splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff",
-      "plugins": [
-        "@react-native-firebase/app",
-        "@react-native-firebase/auth"
-      ]
+      "backgroundColor": "#000000"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      //"backgroundColor": "transparent",
+      //"translucent": true   // For Android, to enable transparency and overlay  // Set status bar background to white after splash
+    },
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "We need access to your photo library to save images."
       }
-      
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/ICONS/icon.png",
         "backgroundColor": "#ffffff"
       },
-
       "permissions": [
         "CAMERA_ROLL",
         "WRITE_EXTERNAL_STORAGE"
@@ -38,19 +34,7 @@
       "package": "com.shaikhkhalid003.HairQue"
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "config": {
-        "firebase": {
-          "apiKey": "AIzaSyC62DlGkZfCg0d36KWtKBkD_v_ddb-bVc4",
-          "authDomain": "hairque-c6278.firebaseapp.com",
-          "databaseURL": "https://hairque-c6278-default-rtdb.asia-southeast1.firebasedatabase.app",
-          "projectId": "hairque-c6278",
-          "storageBucket": "hairque-c6278.appspot.com",
-          "messagingSenderId": "873079016608",
-          "appId": "1:873079016608:web:c6805aa2dd984f5d9e8dc5",
-          "measurementId": "G-10QVGEYGCK"
-        }
-      }
+      "favicon": "./assets/ICONS/favicon.png"
     },
     "extra": {
       "eas": {

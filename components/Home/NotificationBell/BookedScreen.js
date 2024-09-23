@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import styles from './BookedScreenStyles';
+import styles from './styles/BookedScreenStyles';
 import { getDatabase, ref, remove } from 'firebase/database';
 import NotFoundAnimation from './NotFoundAnimation';
 import { responsiveFontSize } from "react-native-responsive-dimensions";

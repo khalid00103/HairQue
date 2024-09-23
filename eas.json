@@ -15,7 +15,11 @@
     "preview1": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "apk" // Ensure production builds also create APKs
+      }
+    }
   },
   "submit": {
     "production": {}

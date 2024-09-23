@@ -4,9 +4,9 @@ import { RadioButton} from 'react-native-paper';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getDatabase, ref, get, set } from 'firebase/database';
 import { doc, setDoc } from 'firebase/firestore';
-import { FIRESTORE_DB } from '../firebase';
+import { FIRESTORE_DB } from '../Important_files/firebase';
 import { useAuth } from './AuthContext';
-import app from '../firebase';
+import app from '../Important_files/firebase';
 import { getAuth, updateProfile } from "firebase/auth";
 import { useFonts } from "expo-font";
 import colors from '../../assets/colors/colors';
@@ -97,7 +97,7 @@ const UserProfileInput = ({ navigation, route }) => {
           <Text style={styles.name}>Name :</Text>
         </View>
         <TextInput
-          placeholder="Username"
+          placeholder="username"
           placeholderTextColor={"gray"}
           value={displayName}
           onChangeText={setdisplayName}
@@ -110,7 +110,8 @@ const UserProfileInput = ({ navigation, route }) => {
           <Text style={styles.name}>Phone :</Text>
         </View>
         <TextInput
-          placeholder="Phone Number"
+          placeholder="phone number"
+          placeholderTextColor={"gray"}
           value={phone}
           onChangeText={setPhone}
           maxLength={10}
@@ -170,6 +171,7 @@ const styles = StyleSheet.create({
     //backgroundColor:colors.TextBlood,
     justifyContent:'space-between',
     marginHorizontal:20,
+    marginBottom:10,
     borderColor: '#7f8c8d33',
     borderWidth: 2,
     borderRadius:12,
@@ -205,7 +207,7 @@ const styles = StyleSheet.create({
   },
   GenderSelection:{
     marginHorizontal:20,
-    paddingVertical:20,
+    paddingVertical:10,
     //backgroundColor:colors.TextBlood,
   },
   Gendertxt:{

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { getDatabase, ref, get, set } from 'firebase/database';
-import { useAuth } from './Authentication/AuthContext'; // Replace with your actual authentication context import
-import { encodeEmail } from '../utils/encodeEmail';
+import { useAuth } from '../Authentication/AuthContext'; // Replace with your actual authentication context import
+import { encodeEmail } from '../../utils/encodeEmail';
 
 const GlobalStateContext = React.createContext();
 

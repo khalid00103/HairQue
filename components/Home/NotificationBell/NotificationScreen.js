@@ -55,7 +55,7 @@ const NotificationScreen = () => {
         //console.error("Phone number is not available.");
         return;
     }
-      console.log(phone);
+      //console.log(phone);
       try {
         const db = getDatabase();
         const bookedRef = ref(db, `bookings/${phone}`);
@@ -70,7 +70,7 @@ const NotificationScreen = () => {
           setData(reversedData);
           setRemainingItems(reversedData.slice(1)); // Skip the first item
           const firstBooking = reversedData[0];
-          console.log("FIRST BOOKING", firstBooking);
+          //console.log("FIRST BOOKING", firstBooking);
 
           // Get current date and time
           const currentDate = moment().format('YYYY-MM-DD');
@@ -93,13 +93,13 @@ const NotificationScreen = () => {
             timeIsAhead = bookingTime.isAfter(currentTime);
           }
 
-          console.log("DATE AHEAD:", dateIsAhead);
-          console.log("TIME AHEAD:", timeIsAhead);
+          //console.log("DATE AHEAD:", dateIsAhead);
+          //console.log("TIME AHEAD:", timeIsAhead);
 
           // Set the first item if the date or time is ahead
           if (dateIsAhead && (!moment(bookingDate).isSame(currentDate) || timeIsAhead)) {
             setFirstItem(firstBooking);
-            console.log("SET FIRST BOOK", firstBooking);
+            //console.log("SET FIRST BOOK", firstBooking);
           }
 
           setStartIndex(1);
